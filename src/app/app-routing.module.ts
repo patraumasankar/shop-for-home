@@ -6,9 +6,11 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { ContainerComponent } from './component/container/container.component';
-import { HeaderComponent } from './component/header/header.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { CartComponent } from './component/cart/cart.component';
+import { OrderComponent } from './component/order/order.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 import { AuthGuard } from './service/auth.guard';
 import { RoleGuard } from './service/role.guard';
@@ -19,7 +21,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: ContainerComponent },
   { path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard] },
-  { path: 'cart', component: CartComponent, canActivate: [AuthGuard]},
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
@@ -34,7 +36,9 @@ export const routeComponents = [
   LoginComponent,
   SignupComponent,
   ContainerComponent,
-  HeaderComponent,
   WishlistComponent,
-  CartComponent
+  CartComponent,
+  OrderComponent,
+  HeaderComponent,
+  FooterComponent,
 ]
